@@ -1,6 +1,6 @@
 
 class CashRegister
-  
+  require "pry"
   attr_accessor :discount, :total
   
   def initialize(employee_discount = nil)
@@ -20,6 +20,7 @@ class CashRegister
     if @discount != nil
       @total -= (@total * @discount)
       "After the discount, the total comes to #{@total}."
+      binding.pry 
     else
       "There is no discount to apply."
     end 
